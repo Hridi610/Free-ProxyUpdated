@@ -41,9 +41,10 @@ print("  # \033[1;34m[ 27 ] >> \033[1;36;40mSOCKS5 PROXY")
 print("  # \033[1;34m[ 28 ] >> \033[1;36;40mUPDATE UTILITY")
 print("  # \033[1;34m[ 29 ] >> \033[1;36;40mEXIT UTILITY")
 
-op=int(raw_input("Options: "))
-
-if(op==1):
+op=int(float(raw_input("Options: ")))
+if (op==""):
+   print("Enter the Number: ")
+elif(op==1):
  proxyDomain = "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=all&timeout=750&country=all"
  system = requests.get(proxyDomain).text
  print(system)
